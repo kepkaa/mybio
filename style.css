@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #2c2c2c; /* Темный серый цвет для фона */
+    color: white; /* Белый цвет для текста */
+}
+
+header {
+    background-color: #4CAF50; /* Зеленый цвет для заголовка */
+    color: white;
+    padding: 15px;
+}
+
+nav {
+    margin: 20px 0;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #4CAF50; /* Цвет ссылок */
+}
+
+section {
+    display: none;
+    padding: 20px;
+}
+
+section.active {
+    display: block;
+}
+
+.progress {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.progress-bar {
+    background-color: #4CAF50; /* Зеленый цвет для прогресс-бара */
+    height: 20px;
+    width: 0;
+    transition: width 1s;
+}
+
+.progress-container {
+    background-color: #f3f3f3; /* Светлый цвет для контейнера прогресс-бара */
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 600px) {
+    nav {
+        display: flex;
+        flex-direction: column; /* Вертикальное размещение ссылок */
+        align-items: center; /* Центрирование ссылок */
+    }
+
+    nav a {
+        margin: 10px 0; /* Отступ между ссылками */
+    }
+
+    section {
+        padding: 10px; /* Уменьшение отступов в секциях */
+    }
+
+    header {
+        padding: 10px; /* Уменьшение отступов в заголовке */
+    }
+}
