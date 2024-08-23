@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>MyBio</title>
+    <link rel="icon" href="https://sun9-5.userapi.com/impg/mDIvYqFFSqSx_x3Xb8XMsDzoNKtwkDQiBi174w/2RSIgqlcJ9k.jpg?size=1024x576&quality=95&sign=c3fe037fb915c1a64e98315043ef1066&type=album" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+    <header>
+        <h1>MyBio</h1>
+        <div class="theme-toggle" onclick="toggleTheme()">🌜</div>
+    </header>
+
+    <nav>
+        <a href="#" onclick="showSection('description')">📌Главная</a>
+        <a href="#" onclick="showSection('mybio')">📢Обновление</a>
+        <a href="#" onclick="showSection('launge')">Какие языки предпочитаю</a>
+        <a href="#" onclick="showSection('develops')">🛠️Разработка</a>
+        <a href="#" onclick="showSection('links')">📜Ссылки</a>
+    </nav>
+
+    <section id="description" class="active">
+        <h2>Главная Страница</h2>
+        <p>Добро пожаловать на мою страничку обо мне, сейчас я расскажу кто я и чем я занимаюсь, меня зовут Артём, мне 16 лет, я занимаюсь программированием 3 года.</p>
+        <p>Чтобы посмотреть обо мне больше, нажимай на соответствующие разделы.</p>
+    </section>
+
+    <section id="launge">
+        <h2>Языки програмированний</h2>
+        <div class="progress">
+            <strong>PYTHON:</strong>
+            <div class="progress-container"><div class="progress-bar" style="width: 100%;"></div></div>
+        </div>
+        <div class="progress">
+            <strong>JAVASCRIPT:</strong>
+            <div class="progress-container"><div class="progress-bar" style="width: 85%;"></div></div>
+        </div>
+        <div class="progress">
+            <strong>C++:</strong>
+            <div class="progress-container"><div class="progress-bar" style="width: 52%;"></div></div>
+        </div>
+        <div class="progress">
+            <strong>C#:</strong>
+            <div class="progress-container"><div class="progress-bar" style="width: 25%;"></div></div>
+        </div>
+        <p>Я разработал этот сайт на языках: <strong>JavaScript</strong> - 100%, <strong>CSS</strong> - 100%.</p>
+    </section>
+
+    <section id="mybio">
+        <h1>Добавлено/Изменено</h1>
+        <p>Смена цвета (белый, черный) - да</p>
+        <p>Регистрация - пока что нет</p>
+        <p>Выдавать доступ по нику, либо по почте - нет</p>
+        <p>Аватарка сайта - да</p>
+    </section>
+
+    <section id="develops">
+        <h1>Что я хочу разработать еще</h1>
+        <p>Авторизация, а значит, подучить немного HTML, а также базу данных и API.</p>
+    </section>
+
+    <section id="links">
+        <h1>Где я есть</h1>
+        <p>Мой дискорд сервер: <a href="https://discord.gg/ZNZ77P3jUR" style="text-decoration: none; color: inherit;">Дискорд</a></p>
+        <p>Мой дискорд: <strong>off.kepkaa</strong></p>
+        <p>Моя группа ВК: <a href="https://vk.com/ddbdev" style="text-decoration: none; color: inherit;">ВКонтакте</a></p>
+        <p>Мой Twitch: <a href="https://www.twitch.tv/kepkaa_aaa" style="text-decoration: none; color: inherit;">Twitch</a></p>
+    </section>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll("section");
+            sections.forEach((section) => section.classList.remove("active"));
+            document.getElementById(sectionId).classList.add("active");
+        }
+
+        function toggleTheme() {
+            document.body.classList.toggle("light-mode");
+            const header = document.querySelector("header");
+            header.classList.toggle("light-mode");
+            const themeToggle = document.querySelector(".theme-toggle");
+            themeToggle.textContent = document.body.classList.contains("light-mode") ? "🌞" : "🌜";
+        }
+    </script>
+</body>
+</html>
